@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 18:02:42 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/17 18:03:31 by dufama           ###   ########.fr       */
+/*   Updated: 2026/03/18 15:13:23 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,18 @@
 #include <iostream>
 #include <string>
 
+class Fixed {
+	private:
+		int _fixedPoint;
+		static int const _value = 8;
+
+	public:
+		Fixed();
+		Fixed(const Fixed &other);
+		Fixed &operator=(const Fixed &e);
+		~Fixed();
+
+};
 
 
 #endif

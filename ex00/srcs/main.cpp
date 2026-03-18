@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/17 18:03:08 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/18 15:16:43 by dufama           ###   ########.fr       */
+/*   Created: 2026/03/18 13:19:58 by dufama            #+#    #+#             */
+/*   Updated: 2026/03/18 15:16:01 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed() : _fixedPoint(0) {
-	std::cout << "Constructor called " <<  std::endl;
-	return;
+int main()
+{
+	Fixed a;
+	Fixed b ( a );
+	return 0;
 }
-
-Fixed::Fixed(const Fixed &other) : _fixedPoint(other._fixedPoint) {
-	std::cout << "Copy constructor called" << std::endl;
-	return ;
-}
-
-Fixed &Fixed::operator=(const Fixed &e) {
-	this->_fixedPoint = e._fixedPoint;
-	return (*this);
-}
-
-Fixed::~Fixed() {
-
-}
-
-
