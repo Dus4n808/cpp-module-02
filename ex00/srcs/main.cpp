@@ -6,15 +6,19 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 13:19:58 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/18 15:16:01 by dufama           ###   ########.fr       */
+/*   Updated: 2026/03/18 15:33:49 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main()
-{
-	Fixed a;
-	Fixed b ( a );
-	return 0;
+int main( void ) {
+Fixed a;
+Fixed b( a );
+Fixed c;
+c = b;
+std::cout << a.getRawBits() << std::endl;
+std::cout << b.getRawBits() << std::endl;
+std::cout << c.getRawBits() << std::endl;
+return 0;
 }

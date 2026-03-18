@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 18:02:42 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/18 15:13:23 by dufama           ###   ########.fr       */
+/*   Updated: 2026/03/18 15:42:43 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Fixed {
 		Fixed(const Fixed &other);
 		Fixed &operator=(const Fixed &e);
 		~Fixed();
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
 
 };
 
