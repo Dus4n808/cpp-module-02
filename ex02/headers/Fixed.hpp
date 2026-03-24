@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 17:45:00 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/23 19:46:40 by dufama           ###   ########.fr       */
+/*   Updated: 2026/03/24 18:10:49 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ class Fixed {
 		float toFloat(void) const;
 		Fixed &operator=(const Fixed &rhs);
 		~Fixed(void);
+
+		static Fixed &min(Fixed &a, Fixed &b);
+		static const Fixed &min(const Fixed &a, const Fixed &b);
+		static Fixed &max(Fixed &a, Fixed &b);
+		static const Fixed &max(const Fixed &a, const Fixed &b);
 
 		//operator
 		bool operator>(const Fixed &a) const;

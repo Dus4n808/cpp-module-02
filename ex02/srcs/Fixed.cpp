@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 17:44:57 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/23 19:46:54 by dufama           ###   ########.fr       */
+/*   Updated: 2026/03/24 18:15:22 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,30 @@ Fixed Fixed::operator--(int) {
 	Fixed old(*this);
 	this->_fixedPoint -= 1;
 	return old;
+}
+
+Fixed &Fixed::min(Fixed &a, Fixed &b) {
+	if (a < b)
+		return a;
+	return b;
+}
+
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b) {
+	if (a < b)
+		return a;
+	return b;
+}
+
+Fixed &Fixed::max(Fixed &a, Fixed &b) {
+	if (a > b)
+		return a;
+	return b;
+}
+
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b) {
+	if (a > b)
+		return a;
+	return b;
 }
 
 

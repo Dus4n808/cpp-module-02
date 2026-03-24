@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 17:44:22 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/23 19:52:27 by dufama           ###   ########.fr       */
+/*   Updated: 2026/03/24 18:15:31 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int main( void ) {
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 
-	// std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
 	return 0;
 }
