@@ -5,41 +5,48 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/17 18:03:08 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/19 16:38:26 by dufama           ###   ########.fr       */
+/*   Created: 2026/03/19 18:02:22 by dufama            #+#    #+#             */
+/*   Updated: 2026/03/23 17:39:02 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "../headers/Fixed.hpp"
 
-Fixed::Fixed() : _fixedPoint(0) {
-	std::cout << "Default constructor called" <<  std::endl;
-	return;
+Fixed::Fixed(void) : _fixedPoint(0) {
+	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &other) : _fixedPoint(other._fixedPoint) {
 	std::cout << "Copy constructor called" << std::endl;
-	return ;
 }
 
+
 Fixed &Fixed::operator=(const Fixed &e) {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "Copy assignement operator called" << std::endl;
 	if (this != &e)
-		setRawBits(e.getRawBits());
-	return (*this);
+		_fixedPoint = e._fixedPoint;
+	return *this;
+}
+
+std::ostream &operator<<(std::ostream &out, const Fixed &value) {
+	out << value.toFloat();
+	return out;
+}
+
+Fixed::Fixed(const int value) : _fixedPoint(value << _bits) {
+}
+
+Fixed::Fixed(const float value) : _fixedPoint(roundf(value * (1 << _bits))){
 }
 
 Fixed::~Fixed() {
 	std::cout << "Destructor called" << std::endl;
 }
 
-int Fixed::getRawBits(void) const {
-	std::cout << "getRawBits member function called" << std::endl;
-	return _fixedPoint;
+int Fixed::toInt(void) const {
+	return _fixedPoint >> _bits;
 }
 
-void Fixed::setRawBits(int const raw) {
-	_fixedPoint = raw;
+float Fixed::toFloat(void) const {
+	return (float)_fixedPoint / (float)(1 << _bits);
 }
-
-
