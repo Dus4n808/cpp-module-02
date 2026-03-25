@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 13:37:05 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/25 13:51:31 by dufama           ###   ########.fr       */
+/*   Updated: 2026/03/25 14:22:59 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,15 @@ class Point {
 
 	public:
 		Point();
+		Point(const float x, const float y);
 		Point(const Point &copy);
 		Point &operator=(const Point &rhs);
 		~Point();
+		Fixed getX() const;
+		Fixed getY() const;
 };
 
+
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif
