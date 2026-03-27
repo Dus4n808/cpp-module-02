@@ -6,11 +6,11 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 13:19:58 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/19 16:52:26 by dufama           ###   ########.fr       */
+/*   Updated: 2026/03/27 14:32:07 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "../headers/Fixed.hpp"
 
 int main( void ) {
 	Fixed a;

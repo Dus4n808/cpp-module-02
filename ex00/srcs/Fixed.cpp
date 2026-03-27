@@ -6,11 +6,11 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 18:03:08 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/19 16:38:26 by dufama           ###   ########.fr       */
+/*   Updated: 2026/03/27 15:12:43 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "../headers/Fixed.hpp"
 
 Fixed::Fixed() : _fixedPoint(0) {
 	std::cout << "Default constructor called" <<  std::endl;
@@ -25,7 +25,7 @@ Fixed::Fixed(const Fixed &other) : _fixedPoint(other._fixedPoint) {
 Fixed &Fixed::operator=(const Fixed &e) {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &e)
-		setRawBits(e.getRawBits());
+		_fixedPoint = e._fixedPoint;
 	return (*this);
 }
 

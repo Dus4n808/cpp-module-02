@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 18:02:22 by dufama            #+#    #+#             */
-/*   Updated: 2026/03/23 17:39:02 by dufama           ###   ########.fr       */
+/*   Updated: 2026/03/27 15:44:12 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,11 @@ std::ostream &operator<<(std::ostream &out, const Fixed &value) {
 }
 
 Fixed::Fixed(const int value) : _fixedPoint(value << _bits) {
+	std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float value) : _fixedPoint(roundf(value * (1 << _bits))){
+	std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::~Fixed() {
